@@ -42,7 +42,7 @@ const loadIcons = () => {
 
 const getIcon = title => {
   loadIcons();
-  const results = filter(classes, title, { maxResults: 1 });
+  const results = filter(classes, title.split(' ')[0], { maxResults: 1 });
   const match = results.length === 0 ? 'shell' : results[0];
   return { class: icons[match], name: match };
 };
