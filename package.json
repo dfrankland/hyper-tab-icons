@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepublish": "npm run build -- --release",
-    "build": "webpack",
+    "build": "node tools/build",
     "test": ""
   },
   "repository": {
