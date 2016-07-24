@@ -1,0 +1,42 @@
+{
+  "name": "hyperterm-tab-icons",
+  "version": "1.0.0",
+  "description": "Icons in the header tabs for the current running process in HyperTerm.",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run build -- --release",
+    "build": "webpack",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfrankland/hyperterm-tab-icons.git"
+  },
+  "keywords": [
+    "hyperterm",
+    "tabs",
+    "icons",
+    "cool"
+  ],
+  "author": "Dylan Frankland <dylan@frankland.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfrankland/hyperterm-tab-icons/issues"
+  },
+  "homepage": "https://github.com/dfrankland/hyperterm-tab-icons#readme",
+  "dependencies": {
+    "extend": "^3.0.0",
+    "fuzzaldrin": "^2.1.0",
+    "react": "^15.2.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "handlebars": "^4.0.5",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  }
+}
