@@ -25,18 +25,17 @@
   },
   "homepage": "https://github.com/dfrankland/hyperterm-tab-icons#readme",
   "dependencies": {
-    "extend": "^3.0.0",
     "fuzzaldrin": "^2.1.0",
     "react": "^15.2.1"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
-    "handlebars": "^4.0.5",
     "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
+    "webfonts-generator": "^0.3.5",
     "webpack": "^1.13.1"
   }
 }

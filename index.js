@@ -1,6 +1,5 @@
 const React = require('React');
 const { filter } = require('fuzzaldrin');
-const extend = require('extend');
 
 const NAME = require('./package.json').name;
 
@@ -59,8 +58,7 @@ const getCustomTitle = (title, active) => {
       {
         className: `${icons.ti} ${icon.class}`,
         style: active ?
-          extend(
-            true,
+          Object.assign(
             {},
             activeStyle,
             mapColors[icon.name] ? { color: mapColors[icon.name] } : {}
