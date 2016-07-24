@@ -28,7 +28,6 @@ const loadIcons = () => {
     icons = require(`./dist/${NAME}.js`);
     Object.keys(mapIcons).forEach(
       mapIcon => {
-        console.log(mapIcon, mapIcons[mapIcon]);
         mapIcons[mapIcon].forEach(
           icon => {
             icons[icon] = icons[mapIcon];
