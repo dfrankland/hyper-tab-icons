@@ -5,6 +5,10 @@ module.exports = {
   nodejs: [
     'node',
   ],
+  ruby: [
+    'irb',
+    'sidekiq',
+  ],
   shell: [
     'bash',
     'fish',
