@@ -24,6 +24,7 @@ const iconScss = (icon, codepoint, color) => `
       color ? `color: ${color};\n    ` : ''
     }&:before {
       content: '\\${codepoint}';
+      margin-right: .25em;
     }
   }
 `;
