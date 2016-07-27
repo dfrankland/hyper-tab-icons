@@ -5,6 +5,7 @@ module.exports = {
   fish: '#D8494F',
   nodejs: '#7EBF00',
   node: '#7EBF00',
+  ruby: '#CC342D',
   shell: '#FFF',
   zsh: '#C5DB00',
 };
