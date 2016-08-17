@@ -74,12 +74,14 @@ const getCustomTitle = (title, active) => {
 };
 
 exports.getTabProps = (uid, parentProps, props) => {
-  props.text = getCustomTitle(props.text, props.isActive);
-  return props;
+  const newProps = Object.assign({}, props);
+  newProps.text = getCustomTitle(props.text, props.isActive);
+  return newProps;
 };
 
 exports.getTabsProps = (parentProps, props) => {
-  props.tabs[0].title = getCustomTitle(props.tabs[0].title, true);
-  return props;
   if (props.tabs.length !== 1 || typeof props.tabs[0].title !== 'string') return props;
+  const newProps = Object.assign({}, props);
+  newProps.tabs[0].title = getCustomTitle(props.tabs[0].title, true);
+  return newProps;
 };
