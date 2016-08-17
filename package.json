@@ -1,6 +1,6 @@
 {
   "name": "hyperterm-tab-icons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Icons in the header tabs for the current running process in HyperTerm.",
   "main": "index.js",
   "scripts": {
