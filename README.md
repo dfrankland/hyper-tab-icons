@@ -67,6 +67,13 @@ Map of process name to color string. Example:
 
 Look at [`src/mapColors.js`][7] for defaults.
 
+#### `config.tabIcons.disableColors`
+
+* Type: `boolean`
+* Default: `false`
+
+Toggles icon colors. Similar to setting all colors to `#FFF`.
+
 ### Contribution
 
 Obviously there are an almost infinite amount of processes out there, so any

@@ -10,6 +10,7 @@ let activeStyle = { transition: 'opacity 200ms ease-in' };
 let inactiveStyle = { color: '#fff', opacity: 0.3 };
 let mapIcons = {};
 let mapColors = {};
+let disableColors = false;
 const loadConfig = () => {
   const config = window.config.getConfig();
   if (config.tabIcons) {
@@ -17,6 +18,7 @@ const loadConfig = () => {
     if (config.tabIcons.inactiveStyle) inactiveStyle = config.tabIcons.inactiveStyle;
     if (config.tabIcons.mapIcons) mapIcons = config.tabIcons.mapIcons;
     if (config.tabIcons.mapColors) mapColors = config.tabIcons.mapColors;
+    if (config.tabIcons.disableColors) disableColors = true;
   }
 };
 
@@ -49,6 +51,8 @@ const getIcon = title => {
 
 const getCustomTitle = (title, active) => {
   const icon = getIcon(title);
+  // can we inherit color from theme/config somehow?
+  const iconColor = disableColors ? '#FFF' : mapColors[icon.name];
   return React.createElement(
     'span',
     {},
@@ -60,7 +64,7 @@ const getCustomTitle = (title, active) => {
           Object.assign(
             {},
             activeStyle,
-            mapColors[icon.name] ? { color: mapColors[icon.name] } : {}
+            iconColor ? { color: iconColor } : {}
           ) :
           inactiveStyle,
       }
