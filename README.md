@@ -1,6 +1,6 @@
-# HyperTerm Tab Icons
+# Hyper.app Tab Icons
 
-> Icons in the header tabs for the current running process in HyperTerm.
+> Icons in the header tabs for the current running process in Hyper.app.
 
 ## How It Works
 
@@ -15,7 +15,7 @@ icons and styles.
 ### Configuration
 
 There are few options to customize the different icons and styles applied.
-You may configure these inside of `~/.hyperterm.js`.
+You may configure these inside of `~/.hyper.js`.
 
 #### `config.tabIcons.activeStyle`
 
@@ -87,8 +87,8 @@ Inspired by [Atom's][8] [`file-icons`][9].
 [2]: http://i.giphy.com/pb6hCi4j0ErpC.gif
 [3]: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText
 [4]: https://facebook.github.io/react/tips/inline-styles.html
-[5]: https://github.com/dfrankland/hyperterm-tab-icons/tree/master/src/icons
-[6]: https://github.com/dfrankland/hyperterm-tab-icons/tree/master/src/mapIcons.js
-[7]: https://github.com/dfrankland/hyperterm-tab-icons/tree/master/src/mapColors.js
+[5]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/icons
+[6]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/mapIcons.js
+[7]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/mapColors.js
 [8]: http://atom.io/
 [9]: https://github.com/DanBrooker/file-icons
