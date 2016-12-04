@@ -8,4 +8,5 @@ module.exports = {
   ruby: '#CC342D',
   shell: '#FFF',
   zsh: '#C5DB00',
+  python: '#FFDF59',
 };
