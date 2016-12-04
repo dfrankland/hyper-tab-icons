@@ -1,4 +1,4 @@
-const React = require('React');
+const React = require('react');
 const { filter } = require('fuzzaldrin');
 
 const NAME = require('./package.json').name;
