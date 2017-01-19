@@ -8,6 +8,10 @@ module.exports = {
     'make',
     'xcodebuild',
   ],
+  clojure: [
+    'lein',
+    'planck'
+  ],
   docker: [
     'docker-compose',
   ],
