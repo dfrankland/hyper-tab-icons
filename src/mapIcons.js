@@ -9,7 +9,8 @@ module.exports = {
     'xcodebuild',
   ],
   clojure: [
-    'lein'
+    'lein',
+    'planck'
   ],
   docker: [
     'docker-compose',
