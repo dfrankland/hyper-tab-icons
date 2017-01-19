@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/dfrankland/hyper-tab-icons#readme",
   "dependencies": {
-    "fuzzaldrin": "^2.1.0",
     "react": "^15.4.1"
   },
   "devDependencies": {

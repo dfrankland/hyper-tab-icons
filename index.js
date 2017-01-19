@@ -1,5 +1,4 @@
 const React = require('react');
-const { filter } = require('fuzzaldrin');
 
 const NAME = require('./package.json').name;
 
@@ -44,7 +43,9 @@ const loadIcons = () => {
 
 const getIcon = title => {
   loadIcons();
-  const results = filter(classes, title.split(' ')[0], { maxResults: 1 });
+  const results = classes.filter((e) => {
+    return new RegExp(`(?:[\\W]+|^)(${e})(?:[\\W]+|$)`, 'i').test(title);
+  });
   const match = results.length === 0 ? 'shell' : results[0];
   return { class: icons[match], name: match };
 };
