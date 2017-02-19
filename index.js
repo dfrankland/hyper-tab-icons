@@ -11,6 +11,8 @@ let inactiveStyle = { color: '#fff', opacity: 0.3 };
 let mapIcons = {};
 let mapColors = {};
 let disableColors = false;
+let processNameMatch = 1;
+let processNameRegex = /^(.*?) /;
 const loadConfig = () => {
   const config = window.config.getConfig();
   if (config.tabIcons) {
@@ -19,6 +21,13 @@ const loadConfig = () => {
     if (config.tabIcons.mapIcons) mapIcons = config.tabIcons.mapIcons;
     if (config.tabIcons.mapColors) mapColors = config.tabIcons.mapColors;
     if (config.tabIcons.disableColors) disableColors = true;
+    if (config.tabIcons.processNameMatch) processNameMatch = config.tabIcons.processNameMatch;
+    if (config.tabIcons.processNameRegex) {
+      processNameRegex = new RegExp(
+        config.tabIcons.processNameRegex.source,
+        config.tabIcons.processNameRegex.flags
+      );
+    }
   }
 };
 
@@ -44,7 +53,13 @@ const loadIcons = () => {
 
 const getIcon = title => {
   loadIcons();
-  const results = filter(classes, title.split(' ')[0], { maxResults: 1 });
+  const processNameMatches = title.match(processNameRegex);
+  let processName = 'shell';
+  if (
+    Array.isArray(processNameMatches) &&
+    processNameMatches[processNameMatch]
+  ) processName = processNameMatches[processNameMatch];
+  const results = filter(classes, processName, { maxResults: 1 });
   const match = results.length === 0 ? 'shell' : results[0];
   return { class: icons[match], name: match };
 };
