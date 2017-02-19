@@ -74,6 +74,35 @@ Look at [`src/mapColors.js`][7] for defaults.
 
 Toggles icon colors. Similar to setting all colors to `#FFF`.
 
+#### `config.tabIcons.processNameRegex`
+
+* Type: `object`
+* Default: `/^(.*?) /`
+
+The regex used to capture the process name in the title.
+
+_If you use something like `zsh` that swaps the process name and current working
+directory, the following regex should work: `/: (.*?)$/`._
+
+> Alternatively supply an object with the properties `source` and `flags`.
+> ```js
+> {
+>   source: '^(.*?) ',
+>   flags: '',
+> }
+> ```
+
+#### `config.tabIcons.processNameMatch`
+
+* Type: `number` (integer)
+* Default: `1`
+
+The index of the match out of the array of matches made by
+`config.tabIcons.processNameRegex`.
+
+> An index of `0` is the full match made by the regex. An index of `1` or more
+> is used to get an exact match from one of the matching groups.
+
 ### Contribution
 
 Obviously there are an almost infinite amount of processes out there, so any
