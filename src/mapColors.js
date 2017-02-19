@@ -10,4 +10,5 @@ module.exports = {
   shell: '#FFF',
   zsh: '#C5DB00',
   python: '#FFDF59',
+  vim: '#007f00',
 };
