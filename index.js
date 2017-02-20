@@ -66,8 +66,29 @@ const getIcon = title => {
 
 const getCustomTitle = (title, active) => {
   const icon = getIcon(title);
-  // can we inherit color from theme/config somehow?
-  const iconColor = disableColors ? '#FFF' : mapColors[icon.name];
+
+  let iconActiveColor = mapColors[icon.name];
+  let iconInactiveColor = mapColors[icon.name];
+  if (disableColors) {
+    iconActiveColor = '#fff';
+    iconInactiveColor = '#ccc';
+    let activeElement = document.querySelector('.tabs_title > span > span');
+    let inactiveElement = activeElement;
+
+    if (!activeElement) {
+      activeElement = document.querySelector('.tab_textActive > .tab_textInner > span > span');
+      inactiveElement = document.querySelector('.tab_text:not(.tab_textActive) > .tab_textInner > span > span');
+    }
+
+    if (activeElement) {
+      iconActiveColor = window.getComputedStyle(activeElement).getPropertyValue('color');
+    }
+
+    if (inactiveElement) {
+      iconInactiveColor = window.getComputedStyle(inactiveElement).getPropertyValue('color');
+    }
+  }
+
   return React.createElement(
     'span',
     {},
@@ -79,9 +100,13 @@ const getCustomTitle = (title, active) => {
           Object.assign(
             {},
             activeStyle,
-            iconColor ? { color: iconColor } : {}
+            iconActiveColor ? { color: iconActiveColor } : {}
           ) :
-          inactiveStyle,
+          Object.assign(
+            {},
+            inactiveStyle,
+            iconInactiveColor ? { color: iconInactiveColor } : {}
+          ),
       }
     ),
     React.createElement(
