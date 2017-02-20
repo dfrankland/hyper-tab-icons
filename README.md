@@ -72,7 +72,8 @@ Look at [`src/mapColors.js`][7] for defaults.
 * Type: `boolean`
 * Default: `false`
 
-Toggles icon colors. Similar to setting all colors to `#FFF`.
+Toggles icon colors. Inherits color from current CSS applied to tab text
+_✨magically✨_.
 
 #### `config.tabIcons.processNameRegex`
 
