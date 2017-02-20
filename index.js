@@ -7,7 +7,7 @@ const NAME = require('./package.json').name;
 exports.decorateConfig = config => config;
 
 let activeStyle = { transition: 'opacity 200ms ease-in' };
-let inactiveStyle = { color: '#fff', opacity: 0.3 };
+let inactiveStyle = Object.assign({}, activeStyle, { opacity: 0.3 });
 let mapIcons = {};
 let mapColors = {};
 let disableColors = false;
