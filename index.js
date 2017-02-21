@@ -42,6 +42,9 @@ const loadIcons = () => {
         mapIcons[mapIcon].forEach(
           icon => {
             icons[icon] = icons[mapIcon];
+            if (!mapColors[icon]) {
+              mapColors[icon] = mapColors[mapIcon];
+            }
           }
         );
       }
