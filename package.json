@@ -1,6 +1,6 @@
 {
   "name": "hyper-tab-icons",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Icons in the header tabs for the current running process in Hyper.app.",
   "main": "index.js",
   "scripts": {
