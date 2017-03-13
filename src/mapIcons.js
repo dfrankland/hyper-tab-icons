@@ -10,7 +10,7 @@ module.exports = {
   ],
   clojure: [
     'lein',
-    'planck'
+    'planck',
   ],
   docker: [
     'docker-compose',
