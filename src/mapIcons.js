@@ -29,13 +29,10 @@ module.exports = {
   nodejs: [
     'node',
   ],
-  rails: [
-    'rails',
-    'rake'
-  ],
   ruby: [
     'irb',
     'sidekiq',
+    'rake',
   ],
   shell: [
     'bash',
