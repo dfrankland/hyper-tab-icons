@@ -6,7 +6,7 @@ module.exports = {
   nodejs: '#7EBF00',
   node: '#7EBF00',
   npm: '#C12127',
-  rails: '#B02B2C',
+  rails: '#CC0000',
   ruby: '#CC342D',
   shell: '#FFF',
   zsh: '#C5DB00',
