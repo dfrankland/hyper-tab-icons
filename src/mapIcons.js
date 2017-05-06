@@ -39,4 +39,14 @@ module.exports = {
     'fish',
     'zsh',
   ],
+  code: [
+  	'nano',
+  	'micro',
+  	'pico',
+  ],
+  read: [
+  	'tail',
+  	'less',
+  	'more',
+  ],
 };
