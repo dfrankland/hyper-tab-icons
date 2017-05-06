@@ -21,6 +21,11 @@ module.exports = {
     'git-remote-http',
     'git-remote-https',
   ],
+  http: [
+  	'curl',
+  	'wget',
+  	'http',
+  ],
   monitor: [
     'htop',
     'iftop',
