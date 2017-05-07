@@ -11,6 +11,7 @@ module.exports = {
   clojure: [
     'lein',
     'planck',
+    'lumo',
   ],
   docker: [
     'docker-compose',
