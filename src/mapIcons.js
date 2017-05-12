@@ -22,7 +22,6 @@ module.exports = {
     'git-remote-https',
   ],
   http: [
-  	'curl',
   	'wget',
   	'http',
   ],
