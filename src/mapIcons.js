@@ -40,4 +40,12 @@ module.exports = {
     'fish',
     'zsh',
   ],
+  code: [
+  	'pico',
+  ],
+  read: [
+  	'tail',
+  	'less',
+  	'more',
+  ],
 };
