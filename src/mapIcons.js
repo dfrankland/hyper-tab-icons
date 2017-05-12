@@ -40,8 +40,6 @@ module.exports = {
     'zsh',
   ],
   code: [
-  	'nano',
-  	'micro',
   	'pico',
   ],
   read: [
