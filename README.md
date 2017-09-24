@@ -35,8 +35,8 @@ You may configure these inside of `~/.hyper.js`.
     }
     ```
 
-This object can be any [CSSStyleDeclaration][3] allowed.
-Essentially pass an inline style object [the same way you would with React][4].
+This object can be any [CSSStyleDeclaration][mdn css] allowed. Pass an inline
+style object [the same way you would with React][react inline-styles].
 
 #### `config.tabIcons.inactiveStyle`
 
