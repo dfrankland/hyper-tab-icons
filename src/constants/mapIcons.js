@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   compile: [
     'cc',
     'ccache',
@@ -23,8 +23,8 @@ module.exports = {
     'git-remote-https',
   ],
   http: [
-  	'wget',
-  	'http',
+    'wget',
+    'http',
   ],
   monitor: [
     'htop',
@@ -45,11 +45,11 @@ module.exports = {
     'zsh',
   ],
   code: [
-  	'pico',
+    'pico',
   ],
   read: [
-  	'tail',
-  	'less',
-  	'more',
+    'tail',
+    'less',
+    'more',
   ],
 };
