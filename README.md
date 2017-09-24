@@ -4,13 +4,17 @@
 
 ## How It Works
 
-Uses [fuzzaldrin][1] to try to match the current tab title against the icons
-that have been pre-compiled and displays it. Has the ability to map different
-icons and styles.
+Uses [fuzzaldrin][fuzzaldrin] to try to match the current tab title with the SVG
+icons that have been added to the repo, then displays the matched icon. Has the
+ability to map different icons and styles.
+
+[fuzzaldrin]: https://github.com/atom/fuzzaldrin
 
 ### Demo
 
-![alt demo][2]
+![alt demo][demo gif]
+
+[demo gif]: http://i.giphy.com/pb6hCi4j0ErpC.gif
 
 ### Configuration
 
@@ -20,7 +24,16 @@ You may configure these inside of `~/.hyper.js`.
 #### `config.tabIcons.activeStyle`
 
 *   Type: `object`
-*   Default: `{ transition: 'opacity 200ms ease-in' }`
+*   Default:
+    ```
+    {
+      display: 'inline-block',
+      marginRight: '0.25rem',
+      transition: 'opacity 200ms ease-in',
+      verticalAlign: 'middle',
+      width: '1rem',
+    }
+    ```
 
 This object can be any [CSSStyleDeclaration][3] allowed.
 Essentially pass an inline style object [the same way you would with React][4].
@@ -28,10 +41,23 @@ Essentially pass an inline style object [the same way you would with React][4].
 #### `config.tabIcons.inactiveStyle`
 
 *   Type: `object`
-*   Default: `{ color: '#fff', opacity: 0.3 }`
+*   Default:
+    ```js
+    {
+      display: 'inline-block',
+      marginRight: '0.25rem',
+      transition: 'opacity 200ms ease-in',
+      verticalAlign: 'middle',
+      width: '1rem',
+      opacity: 0.3,
+    }
+    ```
 
-This object can be any [CSSStyleDeclaration][3] allowed.
-Essentially pass an inline style object [the same way you would with React][4].
+This object can be any [CSSStyleDeclaration][mdn css] allowed. Pass an inline
+style object [the same way you would with React][react inline-styles].
+
+[mdn css]: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText
+[react inline-styles]: https://facebook.github.io/react/tips/inline-styles.html
 
 #### `config.tabIcons.mapIcons`
 
@@ -47,8 +73,11 @@ Map of icon to array of process names. Example:
 }
 ```
 
-Look inside [`src/icons`][5] for possible icons to map to. Look at
-[`src/mapIcons.js`][6] for defaults.
+Look inside [`src/icons`][icons] for possible icons to map to. Look at
+[`src/constants/mapIcons.js`][mapIcons] for defaults.
+
+[icons]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/icons
+[mapIcons]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/constants/mapIcons.js
 
 #### `config.tabIcons.mapColors`
 
@@ -65,7 +94,9 @@ Map of process name to color string. Example:
 }
 ```
 
-Look at [`src/mapColors.js`][7] for defaults.
+Look at [`src/constants/mapColors.js`][mapColors] for defaults.
+
+[mapColors]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/constants/mapColors.js
 
 #### `config.tabIcons.disableColors`
 
@@ -85,7 +116,7 @@ The regex used to capture the process name in the title.
 _If you use something like `zsh` that swaps the process name and current working
 directory, the following regex should work: `/: (.*?)$/`._
 
-> Alternatively supply an object with the properties `source` and `flags`.
+> Alternatively, supply an object with the properties `source` and `flags`.
 > ```js
 > {
 >   source: '^(.*?) ',
@@ -106,19 +137,12 @@ The index of the match out of the array of matches made by
 
 ### Contribution
 
-Obviously there are an almost infinite amount of processes out there, so any
-help adding new icons, mapping colors, et cetera is greatly appreciated!
+There are an almost infinite amount of processes out there, so any help adding
+new icons, mapping colors, et cetera is greatly appreciated!
 
 ### Credit
 
-Inspired by [Atom's][8] [`file-icons`][9].
+Inspired by [Atom's][atom] [`file-icons`][file-icons].
 
-[1]: https://github.com/atom/fuzzaldrin
-[2]: http://i.giphy.com/pb6hCi4j0ErpC.gif
-[3]: https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration/cssText
-[4]: https://facebook.github.io/react/tips/inline-styles.html
-[5]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/icons
-[6]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/mapIcons.js
-[7]: https://github.com/dfrankland/hyper-tab-icons/tree/master/src/mapColors.js
-[8]: http://atom.io/
-[9]: https://github.com/DanBrooker/file-icons
+[atom]: http://atom.io/
+[file-icons]: https://github.com/DanBrooker/file-icons
