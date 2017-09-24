@@ -6,6 +6,7 @@
   "scripts": {
     "prebuild": "rimraf ./dist",
     "build": "rollup -c ./rollup.config.js",
+    "prepublishOnly": "npm run build",
     "lint": "eslint -c ./package.json ./src"
   },
   "repository": {
