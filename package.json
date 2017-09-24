@@ -3,6 +3,9 @@
   "version": "2.0.0",
   "description": "Icons in the header tabs for the current running process in Hyper.app.",
   "main": "./dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
   "scripts": {
     "prebuild": "rimraf ./dist",
     "build": "rollup -c ./rollup.config.js",
