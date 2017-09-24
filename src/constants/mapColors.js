@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   bash: '#FFF',
   docker: '#0EB7ED',
   'docker-compose': '#0EB7ED',
