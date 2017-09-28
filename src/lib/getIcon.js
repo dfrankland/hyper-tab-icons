@@ -37,8 +37,8 @@ const mappedIconKeys = Object.keys(mappedTabIcons);
 let processNameRegex = /^(.*?) /;
 if (config.processNameRegex) {
   processNameRegex = new RegExp(
-    config.tabIcons.processNameRegex.source,
-    config.tabIcons.processNameRegex.flags,
+    config.processNameRegex.source,
+    config.processNameRegex.flags,
   );
 }
 
