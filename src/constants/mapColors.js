@@ -12,4 +12,5 @@ export default {
   zsh: '#C5DB00',
   python: '#FFDF59',
   vim: '#007f00',
+  yarn: '#2C8EBB',
 };
