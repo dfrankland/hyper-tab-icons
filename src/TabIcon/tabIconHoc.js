@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import defaultMapColors from '../constants/mapColors';
-import getConfig from './getConfig';
 
 const DEFAULT_ACTIVE_STYLE = {
   display: 'inline-block',
@@ -16,9 +15,7 @@ const DEFAULT_INACTIVE_STYLE = {
   opacity: 0.3,
 };
 
-const getMappedActiveStyle = name => (active) => {
-  const config = getConfig();
-
+const getMappedActiveStyle = (config, name) => (active) => {
   const {
     activeStyle = DEFAULT_ACTIVE_STYLE,
     inactiveStyle = DEFAULT_INACTIVE_STYLE,
@@ -66,8 +63,8 @@ const getMappedActiveStyle = name => (active) => {
   };
 };
 
-export default (name, Component) => {
-  const getActiveStyle = getMappedActiveStyle(name);
+export default config => (name, Component) => {
+  const getActiveStyle = getMappedActiveStyle(config, name);
 
   const TabIcon = ({ active, ...props }) => (
     <Component {...props} style={getActiveStyle(active)} />
