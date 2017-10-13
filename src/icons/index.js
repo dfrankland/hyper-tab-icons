@@ -5,6 +5,7 @@ export atom from './atom.svg';
 export bower from './bower.svg';
 export bq from './bq.svg';
 export clojure from './clojure.svg';
+export database from './database.svg';
 export code from './code.svg';
 export coffee from './coffee.svg';
 export compile from './compile.svg';
