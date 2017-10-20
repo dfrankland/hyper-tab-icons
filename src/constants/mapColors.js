@@ -6,6 +6,8 @@ export default {
   nodejs: '#7EBF00',
   node: '#7EBF00',
   npm: '#C12127',
+  mongod: '#589636',
+  mongo: '#589636',
   rails: '#CC0000',
   ruby: '#CC342D',
   shell: '#FFF',

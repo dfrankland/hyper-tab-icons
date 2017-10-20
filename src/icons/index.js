@@ -10,6 +10,7 @@ export coffee from './coffee.svg';
 export compile from './compile.svg';
 export composer from './composer.svg';
 export curl from './curl.svg';
+export database from './database.svg';
 export docker from './docker.svg';
 export git from './git.svg';
 export go from './go.svg';

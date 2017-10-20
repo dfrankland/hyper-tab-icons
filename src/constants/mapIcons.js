@@ -13,6 +13,12 @@ export default {
     'planck',
     'lumo',
   ],
+  database: [
+    'mongodb',
+    'mongod',
+    'mongo',
+    'mysql',
+  ],
   docker: [
     'docker-compose',
   ],
